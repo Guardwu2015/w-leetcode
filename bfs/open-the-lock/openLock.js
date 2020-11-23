@@ -5,48 +5,48 @@
  * @param {string} target
  * @return {number}
  */
-var openLock = function(deadends, target) {
-    if(target === null) {
+var openLock = function (deadends, target) {
+    if (target === null) {
         return -1
     }
     if (target === '0000') {
         return 0
     }
 
-    let start = '0000'
-    if(deadends.includes(target) || deadends.includes(start)) {
+    const start = '0000'
+    if (deadends.includes(target) || deadends.includes(start)) {
         return -1
     }
-    
+
     const q = []
-    const visited=new Set(deadends)
-    let step=0
+    const visited = new Set(deadends)
+    let step = 0
     q.push(start)
     visited.add(start)
 
-    while(q.length){
-        for(let i = q.length; i > 0; i--){
+    while (q.length) {
+        for (let i = q.length; i > 0; i--) {
             const cur = q.shift();
-            if(target === cur){
+            if (target === cur) {
                 return step
             }
 
             const nexts = getNexts(cur)
-            for(let str of nexts){
-                if(!deadends.includes(str) && !visited.has(str)){
-                  visited.add(str)
+            for (let str of nexts) {
+                if (!deadends.includes(str) && !visited.has(str)) {
+                    visited.add(str)
                     q.push(str)
                 }
             }
         }
         step++
-    }  
-    return -1  
+    }
+    return -1
 };
 
-function getNexts(cur){
-    const list=[]
-    for(let i=0; i<4; i++){
+function getNexts(cur) {
+    const list = []
+    for (let i = 0; i < 4; i++) {
         const curArr = cur.split('')
         const char = cur.charAt(i)
         curArr[i] = char === '0' ? '9' : Number(char) - 1
