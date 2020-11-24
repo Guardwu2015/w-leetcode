@@ -3,7 +3,7 @@
  * @param {number[][]} board
  * @return {number}
  */
-var slidingPuzzle = function (board) {
+const slidingPuzzle = function (board) {
     const target = [1, 2, 3, 4, 5, 0]
     let queue = [[].concat(...board)]
     let visited = {},
@@ -28,7 +28,7 @@ var slidingPuzzle = function (board) {
             const idx = cur.findIndex(v => !v)
             for (let j = 0; j < neighbor[idx].length; j++) {
                 let adj = neighbor[idx][j]
-                let list = [...cur];
+                let list = [...cur]
                 [list[adj], list[idx]] = [list[idx], list[adj]]
                 if (!visited[list.toString()]) {
                     queue.push(list)
