@@ -7,7 +7,7 @@
  * @return {number}
  */
 var findKthLargest = function (nums, k) {
-  let lo = 0, hi = nums.length - 1;
+    let lo = 0, hi = nums.length - 1;
 
     k = nums.length - k;
     while (lo <= hi) {
