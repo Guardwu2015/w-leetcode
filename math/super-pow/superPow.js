@@ -19,15 +19,29 @@ const superPow = function (a, b) {
 }
 
 // 计算 a 的 k 次方然后与 base 求模的结果
+// function mypow(a, k) {
+//     // 对因子求模
+//     a %= base
+//     let res = 1
+//     for (let _ = 0; _ < k; _++) {
+//         // 这里有乘法，是潜在的溢出点
+//         res *= a
+//         // 对乘法结果求模
+//         res %= base
+//     }
+//     return res
+// }
+
 function mypow(a, k) {
-    // 对因子求模
+    if (k === 0) return 1
     a %= base
-    let res = 1
-    for (let _ = 0; _ < k; _++) {
-        // 这里有乘法，是潜在的溢出点
-        res *= a
-        // 对乘法结果求模
-        res %= base
+
+    if (k % 2 == 1) {
+        // k 是奇数
+        return (a * mypow(a, k - 1)) % base
+    } else {
+        // k 是偶数
+        const sub = mypow(a, Math.floor(k / 2))
+        return (sub * sub) % base
     }
-    return res
 }
