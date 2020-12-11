@@ -22,8 +22,8 @@ const isSubsequence = function(s, t) {
  * @return {boolean}
  */
 const isSubsequence = function(s, t) {
-   const m = s.length, n = t.length
-    // 对 t 进行预处理
+    const m = s.length, n = t.length
+    // 对t进行预处理, 统计t中每个字符出现的次数
     const index = {}
     for (let i = 0; i < n; i++) {
         const c = t[i]
