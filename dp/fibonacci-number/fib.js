@@ -1,7 +1,7 @@
 // https://leetcode-cn.com/problems/fibonacci-number
 
 /**
- * 思路：动态规划，重叠子问题
+ * 思路-：动态规划，重叠子问题
  * @param {number} N
  * @return {number}
  */
@@ -20,4 +20,25 @@ function helper(memo, n) {
     if (memo[n]) return memo[n]
     memo[n] = helper(memo, n - 1) + helper(memo, n - 2)
     return memo[n]
+}
+
+/**
+ * 思路二
+ * @param {number} n
+ * @return {number}
+ */
+const fib = function(n) {
+    if (n === 0) {
+        return 0
+    }
+    if (n === 2 || n === 1) {
+        return 1
+    }
+    let prev = 1, curr = 1
+    for (let i = 3; i <= n; i++) {
+        const sum = prev + curr
+        prev = curr
+        curr = sum
+    }
+    return curr
 }
