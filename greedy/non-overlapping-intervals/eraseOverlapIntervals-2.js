@@ -24,11 +24,11 @@ const eraseOverlapIntervals = function(intervals) {
 
         let res = 1
         let pre = 0
-        for(let i = 1 ; i < newIntervals.length ; i ++)
+        for(let i = 1; i < newIntervals.length; i ++)
             if(newIntervals[i][0] >= newIntervals[pre][1]){
                 res ++
                 pre = i
             }
 
         return intervals.length - res
-};
+}
