@@ -2,7 +2,7 @@
 
 /**
  * 思路：记忆化搜索
- * 时间复杂度: O(n ^ 2)
+ * 时间复杂度: O(n^2)
  * 空间复杂度: O(n)
  * @param {number[]} nums
  * @return {number}
@@ -19,7 +19,7 @@ const lengthOfLIS = function (nums) {
         res = Math.max(res, getMaxLength(nums, i))
     }
     return res
-};
+}
 
 function getMaxLength(nums, index) {
     if (memo[index] !== -1) {
