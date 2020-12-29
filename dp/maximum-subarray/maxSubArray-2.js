@@ -1,5 +1,5 @@
 /**
- * 思路： 动态规划
+ * 思路：动态规划, 状态压缩
  * @param {number[]} nums
  * @return {number}
  */
