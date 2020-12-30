@@ -37,3 +37,31 @@ const canPartition = function (nums) {
 
   return memo[C]
 }
+
+const canPartition = function(nums) {
+    const n = nums.length
+    if (n < 2) {
+        return false
+    }
+    let sum = 0, maxNum = 0
+    for (const num of nums) {
+        sum += num;
+        // maxNum = maxNum > num ? maxNum : num
+        maxNum = Math.max(maxNum, num)
+    }
+    if (sum & 1) {
+        return false
+    }
+    sum /= 2
+    if (maxNum > sum) {
+        return false
+    }
+    const dp = new Array(sum + 1).fill(false)
+    dp[0] = true
+    for (const num of nums) {
+        for (let j = sum; j >= num; --j) {
+            dp[j] |= dp[j - num];
+        }
+    }
+    return dp[sum]
+}
