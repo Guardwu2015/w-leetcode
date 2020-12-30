@@ -20,7 +20,7 @@ const longestCommonSubsequence = function (text1, text2) {
     }
 
     for (let i = 0; i < m; i++) {
-        if (text1.charAt(i) == text2.charAt(0)) {
+        if (text1.charAt(i) === text2.charAt(0)) {
             for (let k = i; k < m; k++)
                 memo[k][0] = 1
             break
@@ -28,7 +28,7 @@ const longestCommonSubsequence = function (text1, text2) {
     }
 
     for (let j = 0; j < n; j++) {
-        if (text1.charAt(0) == text2.charAt(j)) {
+        if (text1.charAt(0) === text2.charAt(j)) {
             for (let k = j; k < n; k++)
                 memo[0][k] = 1
             break
@@ -38,7 +38,7 @@ const longestCommonSubsequence = function (text1, text2) {
     // 动态规划的过程
     for (let i = 1; i < m; i++) {
         for (let j = 1; j < n; j++) {
-            if (text1.charAt(i) == text2.charAt(j)) {
+            if (text1.charAt(i) === text2.charAt(j)) {
                 memo[i][j] = 1 + memo[i - 1][j - 1]
             } else {
                 memo[i][j] = Math.max(memo[i - 1][j], memo[i][j - 1])

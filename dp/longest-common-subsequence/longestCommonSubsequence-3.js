@@ -20,10 +20,11 @@ const longestCommonSubsequence = function (text1, text2) {
     // memo[i][0] 表示s2取空字符串时, 和s1的前i个字符作比较
     // 所以, memo[0][j] 和 memo[i][0] 均取0
     // 我们不需要对memo进行单独的边界条件处理 :-)
-    const memo = []
-    for (let i = 0; i < m + 1; i++) {
-        memo[i] = new Array(n + 1).fill(0)
-    }
+    const memo = new Array(m + 1).fill(new Array(n).fill(0)) // 注意数组的长度
+    // const memo = []
+    // for (let i = 0; i <= m; i++) {
+    //     memo[i] = new Array(n).fill(0)
+    // }
 
     // 动态规划的过程
     for (let i = 1; i <= m; i++) {
@@ -40,3 +41,4 @@ const longestCommonSubsequence = function (text1, text2) {
 }
 
 const result = longestCommonSubsequence('abcde', 'ace')
+console.log('result', result)
