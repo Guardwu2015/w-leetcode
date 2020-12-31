@@ -8,14 +8,17 @@
  * @param {number[]} s
  * @return {number}
  */
-const findContentChildren = function(g, s) {
-    g.sort()
-    s.sort()
-    console.log(g, s)
-    let gi = 0, si = 0
+const findContentChildren = function (g, s) {
+    const compare = (a, b) => {
+        return a - b
+    }
+    g.sort(compare)
+    s.sort(compare)
+    let gi = 0,
+        si = 0
     let res = 0
-    while(gi >= 0 && si >= 0){
-        if(s[si] >= g[gi]){
+    while (gi < g.length  && si < s.length) {
+        if (s[si] >= g[gi]) {
             res++
             gi++
         }
@@ -24,3 +27,5 @@ const findContentChildren = function(g, s) {
 
     return res
 }
+
+export default findContentChildren

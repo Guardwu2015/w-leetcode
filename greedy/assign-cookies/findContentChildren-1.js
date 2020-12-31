@@ -9,9 +9,11 @@
  * @return {number}
  */
 const findContentChildren = function(g, s) {
-    g.sort()
-    s.sort()
-    console.log(g, s)
+    const compare = (a, b) => {
+        return a - b
+    }
+    g.sort(compare)
+    s.sort(compare)
     let gi = g.length - 1, si = s.length - 1
     let res = 0
     while(gi >= 0 && si >= 0){
@@ -24,3 +26,7 @@ const findContentChildren = function(g, s) {
 
     return res
 }
+
+
+
+export default findContentChildren

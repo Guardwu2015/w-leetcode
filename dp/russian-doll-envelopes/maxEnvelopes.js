@@ -6,7 +6,7 @@
  * @param {number[][]} envelopes
  * @return {number}
  */
-var maxEnvelopes = function (envelopes) {
+const maxEnvelopes = function (envelopes) {
     const n = envelopes.length
     // 按宽度升序排列，如果宽度一样，则按高度降序排列
     envelopes.sort((a, b) => {
@@ -50,3 +50,5 @@ const lengthOfLIS = function (nums) {
 
     return res
 }
+
+export default maxEnvelopes
