@@ -12,14 +12,15 @@ const knapsack01 = function (w, v, C) {
           return 0
         }
 
-        const memo = []
-        // 初始化二维数组memo的值为-1
-        for(let i = 0; i < n; i ++) {
-          memo[i] = []
-          for(let j = 0; j <= C; j ++) {
-            memo[i][j] = -1
-          }
-        }
+        // const memo = []
+        // // 初始化二维数组memo的值为-1
+        // for(let i = 0; i < n; i ++) {
+        //   memo[i] = []
+        //   for(let j = 0; j <= C; j ++) {
+        //     memo[i][j] = -1
+        //   }
+        // }
+        const memo = new Array(n).fill(new Array(C + 1).fill(-1))
 
 
         for(let j = 0; j <= C; j ++) {
