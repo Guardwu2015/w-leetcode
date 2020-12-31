@@ -18,6 +18,7 @@ const canPartition = function(nums) {
         sum += num
         maxNum = maxNum > num ? maxNum : num
     }
+    // 判断奇偶数，1为奇数，0为偶数
     if (sum & 1) {
         return false
     }
@@ -26,6 +27,8 @@ const canPartition = function(nums) {
         return false
     }
     const dp = new Array(n).fill(0).map(v => new Array(sum + 1, false))
+
+    // base case
     for (let i = 0; i < n; i++) {
         dp[i][0] = true
     }
