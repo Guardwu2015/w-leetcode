@@ -35,3 +35,5 @@ const eraseOverlapIntervals = function(intervals) {
 
         return intervals.length - res
 }
+
+export default eraseOverlapIntervals

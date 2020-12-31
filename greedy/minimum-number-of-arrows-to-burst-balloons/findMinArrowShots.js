@@ -27,3 +27,5 @@ const findMinArrowShots = function (points) {
     }
     return count
 }
+
+export default findMinArrowShots
