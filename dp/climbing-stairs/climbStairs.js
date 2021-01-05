@@ -5,11 +5,12 @@
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
+
+const climbStairs1 = function (n) {
     const memo = new Array(n + 1).fill(-1)
 
     return calcWays(n, memo)
-};
+}
 
 function calcWays (n, memo) {
     if (n === 0 || n === 1) {
@@ -27,7 +28,7 @@ function calcWays (n, memo) {
  * @param {number} n
  * @return {number}
  */
-const climbStairs = function(n) {
+const climbStairs2 = function(n) {
     const memo = []
     memo[0] = 1
     memo[1] = 1
@@ -37,4 +38,16 @@ const climbStairs = function(n) {
     }
 
     return memo[n]
+}
+
+// const result1 = climbStairs1(1)
+// const result2 = climbStairs2(2)
+// const result3 = climbStairs1(10)
+// const result4 = climbStairs2(20)
+
+// console.log('result1---', result1, result2, result3, result4);
+
+export {
+    climbStairs1,
+    climbStairs2,
 }

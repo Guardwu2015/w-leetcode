@@ -1,11 +1,11 @@
 // https://leetcode-cn.com/problems/fibonacci-number
 
 /**
- * 思路-：动态规划，重叠子问题
+ * 思路-：递归，重叠子问题
  * @param {number} N
  * @return {number}
  */
-const fib = function (N) {
+const fib1 = function (N) {
     if (N < 1) return 0
     // 备忘录全初始化为 0
     const memo = new Array(N + 1).fill(0)
@@ -27,7 +27,7 @@ function helper(memo, n) {
  * @param {number} n
  * @return {number}
  */
-const fib = function(n) {
+const fib2 = function(n) {
     if (n === 0) {
         return 0
     }
@@ -41,4 +41,9 @@ const fib = function(n) {
         curr = sum
     }
     return curr
+}
+
+export { 
+    fib1,
+    fib2,
 }
