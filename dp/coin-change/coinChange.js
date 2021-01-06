@@ -24,3 +24,9 @@ const coinChange = function(coins, amount) {
   
   return dp[amount] === Infinity ? -1 : dp[amount]
 }
+
+// coins = [1, 2, 5], amount = 11
+// const result = coinChange(coins, amount)
+// console.log('result', result)
+
+export default coinChange
