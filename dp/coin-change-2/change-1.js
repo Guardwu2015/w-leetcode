@@ -17,3 +17,5 @@ const change = function(amount, coins) {
 
         return dp[amount]
 }
+
+export default change
