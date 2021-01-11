@@ -14,25 +14,25 @@
  * @return {number}
  */
 const minDepth = function(root) {
-  if (root === null) {
-      return 0
-  }
+    if (root === null) {
+        return 0
+    }
 
-  const q = [root]
-  let depth = 1
-  while (q.length) {
-      const len = q.length
-      for (let i = 0; i < len; i++) {
-          const node = q.shift()
-          if (node.left == null && node.right == null) {
-              return depth
-          }
+    const q = [root]
+    let depth = 1
+    while (q.length) {
+        const len = q.length
+        for (let i = 0; i < len; i++) {
+            const node = q.shift()
+            if (node.left == null && node.right == null) {
+                return depth
+            }
 
-          node.left && q.push(node.left)
-          node.right && q.push(node.right)
+            node.left && q.push(node.left)
+            node.right && q.push(node.right)
 
-      }
-      depth++
-  }
-  return depth
+        }
+        depth++
+    }
+    return depth
 }

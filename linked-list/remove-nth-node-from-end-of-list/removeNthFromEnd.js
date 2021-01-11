@@ -8,6 +8,7 @@
  * }
  */
 /**
+ * 思路：双指针
  * @param {ListNode} head
  * @param {number} n
  * @return {ListNode}
@@ -28,6 +29,7 @@ const removeNthFromEnd = function(head, n) {
     slow = slow.next
   }
 
+  // 这一步作用：删除指定节点
   slow.next = slow.next.next
 
   return dummyHead

@@ -1,6 +1,17 @@
 // LC 回文链表
 // https://leetcode-cn.com/problems/palindrome-linked-list/
-
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * 思路：双指针，链表翻转
+ * @param {ListNode} head
+ * @return {boolean}
+ */
 const isPalindrome = function(head) {
   // 双指针求链表中点
   let slow = head, fast = head
@@ -31,7 +42,7 @@ const isPalindrome = function(head) {
 function reverse(head) {
   let prev = null, cur = head
   while (cur !== null) {
-    next = cur.next
+    let next = cur.next
     cur.next = prev
     prev = cur
     cur = next

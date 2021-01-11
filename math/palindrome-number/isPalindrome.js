@@ -9,12 +9,12 @@ const isPalindrome = function (x) {
     let num = x,
         div = 1
     let n = x
-    while (n / div > 10) {
+    while (Math.floor(n / div) >= 10) {
         div *= 10
         n = Math.floor(n / 10)
     }
     while (num !== 0) {
-        const l = Math.floor(x / 100)
+        const l = Math.floor(num / div)
         const r = x % 10
         if (l !== r) return false
         num = Math.floor((x % div) / 10)

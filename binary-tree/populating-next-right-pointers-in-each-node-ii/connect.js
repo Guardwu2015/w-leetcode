@@ -1,6 +1,7 @@
-// https: //leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/
+// https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/
 
 /**
+ *  思路层序遍历
  * // Definition for a Node.
  * function Node(val, left, right, next) {
  *    this.val = val === undefined ? null : val;

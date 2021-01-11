@@ -1,6 +1,6 @@
 // https://leetcode-cn.com/leetbook/read/linked-list/fv6w7/
-// 虚拟头结点，相加进位
 /**
+ * 思路： 虚拟头结点，相加进位
  * Definition for singly-linked list.
  * function ListNode(val, next) {
  *     this.val = (val===undefined ? 0 : val)

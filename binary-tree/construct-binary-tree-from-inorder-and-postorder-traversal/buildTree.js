@@ -36,9 +36,9 @@ function build (inorder, inStart, inEnd,
 
         const root = new TreeNode(rootVal)
         root.left = build(inorder, inStart, index -1,
-                          postorder, postStart, postStart + leftSize - 1)
+                        postorder, postStart, postStart + leftSize - 1)
         root.right = build(inorder, index + 1, inEnd,
-                          postorder, postStart + leftSize, postEnd - 1)
+                        postorder, postStart + leftSize, postEnd - 1)
 
         return root
 }

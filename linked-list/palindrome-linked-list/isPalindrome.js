@@ -1,7 +1,6 @@
 // https://leetcode-cn.com/problems/palindrome-linked-list/
 
 /**
- * 思路：快慢指针，翻转链表
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
@@ -9,6 +8,7 @@
  * }
  */
 /**
+ * 思路：快慢指针，翻转链表
  * @param {ListNode} head
  * @return {boolean}
  */

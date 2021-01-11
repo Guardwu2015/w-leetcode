@@ -29,10 +29,10 @@ function partition(nums, lo, hi) {
     let i = lo, j = hi + 1;
     while (true) {
         while (nums[++i] < pivot) {
-            if (i == hi) break;
+            if (i === hi) break;
         }
         while (nums[--j] > pivot) {
-            if (j == lo) break;
+            if (j === lo) break;
         }
         if (i >= j) break;
 

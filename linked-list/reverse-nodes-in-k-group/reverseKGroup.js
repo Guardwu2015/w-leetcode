@@ -1,4 +1,4 @@
-// https: //leetcode-cn.com/problems/reverse-nodes-in-k-group/submissions/
+// https: //leetcode-cn.com/problems/reverse-nodes-in-k-group/
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -32,7 +32,7 @@ function reverse(a, b) {
     let prev = null,
         cur = a,
         next = a;
-    // while 终止的条件改一下就行了
+    // while 终止的条件为节点b
     while (cur !== b) {
         next = cur.next;
         cur.next = prev;

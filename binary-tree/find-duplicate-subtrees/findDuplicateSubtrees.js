@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/find-duplicate-subtrees/submissions/
+// https://leetcode-cn.com/problems/find-duplicate-subtrees/
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -28,7 +28,7 @@ function traverse (root, memo, res) {
     const left = traverse(root.left, memo, res);
     const right = traverse(root.right, memo, res);
 
-    const subTree = left + "," + right+ "," + root.val;
+    const subTree = `${left},${right},${root.val}`;
     const freq = memo.get(subTree) ? memo.get(subTree) : 0;
 
     if (freq === 1) {

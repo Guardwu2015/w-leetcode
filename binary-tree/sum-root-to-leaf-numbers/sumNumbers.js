@@ -1,6 +1,7 @@
-// https: //leetcode-cn.com/problems/sum-root-to-leaf-numbers/
+// https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/
 
 /**
+ * 思路：深度优先遍历
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;

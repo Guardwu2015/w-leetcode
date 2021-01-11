@@ -8,6 +8,7 @@
  * }
  */
 /**
+ * 思路：中序遍历
  * @param {TreeNode} root
  * @param {number} k
  * @return {number}
