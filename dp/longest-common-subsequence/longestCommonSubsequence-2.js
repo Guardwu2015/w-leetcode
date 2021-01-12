@@ -19,6 +19,7 @@ const longestCommonSubsequence = function (text1, text2) {
         memo[i] = new Array(n).fill(0)
     }
 
+    // base case
     for (let i = 0; i < m; i++) {
         if (text1.charAt(i) === text2.charAt(0)) {
             for (let k = i; k < m; k++)
@@ -26,7 +27,8 @@ const longestCommonSubsequence = function (text1, text2) {
             break
         }
     }
-
+    
+    // base case
     for (let j = 0; j < n; j++) {
         if (text1.charAt(0) === text2.charAt(j)) {
             for (let k = j; k < n; k++)
@@ -49,4 +51,4 @@ const longestCommonSubsequence = function (text1, text2) {
     return memo[m - 1][n - 1]
 }
 
-const result = longestCommonSubsequence('abcde', 'ace')
+export default longestCommonSubsequence

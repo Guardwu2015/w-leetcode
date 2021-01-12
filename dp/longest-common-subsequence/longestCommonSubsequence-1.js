@@ -75,3 +75,5 @@ function getLCS(s1, s2) {
 
     return res
 }
+
+export default longestCommonSubsequence
