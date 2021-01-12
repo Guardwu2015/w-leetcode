@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/word-search/submissions/
+// https://leetcode-cn.com/problems/word-search/
 /**
  * 思路：回溯，dfs
  * @param {character[][]} board

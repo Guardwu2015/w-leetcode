@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/generate-parentheses/submissions/
+// https://leetcode-cn.com/problems/generate-parentheses
 
 /**
  * @param {number} n
@@ -14,13 +14,14 @@ const generateParenthesis = function (n) {
 };
 
 function backtrack(left, right, track, res) {
+    // 若左括号剩下的多，说明不合法
     if (right < left) {
         return
     }
     if (left < 0 || right < 0) {
         return
     }
-    if (left == 0 && right == 0) {
+    if (left === 0 && right === 0) {
         res.push(track.join(''))
         return
     }

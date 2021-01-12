@@ -6,7 +6,7 @@
 const res = []
 const combine = function (n, k) {
     if (n <= 0 || k <= 0 || k > n) {
-        return res
+        return []
     }
 
     backtrack(n, k, 1, []);
