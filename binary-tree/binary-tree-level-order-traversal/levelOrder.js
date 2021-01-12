@@ -8,6 +8,7 @@
  * }
  */
 /**
+ * 思路：bfs
  * @param {TreeNode} root
  * @return {number[][]}
  */

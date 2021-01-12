@@ -1,4 +1,4 @@
-// https: //leetcode-cn.com/problems/sliding-puzzle/
+// https://leetcode-cn.com/problems/sliding-puzzle/
 /**
  * @param {number[][]} board
  * @return {number}
@@ -25,7 +25,9 @@ const slidingPuzzle = function (board) {
             if (cur.toString() === target.toString()) {
                 return step
             }
-            const idx = cur.findIndex(v => !v)
+            // 数字0的索引，只有0代表空格，可以移动
+            // const idx = cur.findIndex(v => !v)
+            const idx = cur.indexOf(0)
             for (let j = 0; j < neighbor[idx].length; j++) {
                 let adj = neighbor[idx][j]
                 let list = [...cur]
