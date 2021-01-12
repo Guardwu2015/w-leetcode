@@ -14,7 +14,12 @@
  *     }
  * }
  */
-
+/**
+ * 思路：有点像前序遍历
+ * @param {TreeNode} root
+ * @param {number} key
+ * @return {TreeNode}
+ */
 const deleteNode = function (root, key) {
     if (root == null) return null
     if (root.val == key) {

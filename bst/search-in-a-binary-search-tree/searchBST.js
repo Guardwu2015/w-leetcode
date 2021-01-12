@@ -1,14 +1,17 @@
-// https: //leetcode-cn.com/problems/search-in-a-binary-search-tree/
+// https://leetcode-cn.com/problems/search-in-a-binary-search-tree/
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
  * }
  */
-
+/**
+ * 思路：中序遍历
+ * @param {TreeNode} root
+ * @param {number} val
+ * @return {TreeNode}
+ */
 const searchBST = function (root, val) {
     if (root == null) {
         return null

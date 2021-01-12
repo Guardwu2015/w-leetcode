@@ -9,7 +9,7 @@
  */
 
 /**
- * 思路：
+ * 思路：后序遍历
  * @param {TreeNode} root
  * @param {TreeNode} p
  * @param {TreeNode} q

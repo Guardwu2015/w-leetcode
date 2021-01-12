@@ -1,14 +1,17 @@
-// https: //leetcode-cn.com/problems/validate-binary-search-tree/
+// https://leetcode-cn.com/problems/validate-binary-search-tree/
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
  * }
  */
-
+/**
+ * 思路：前序遍历
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
 const isValidBST = function (root) {
     return isValidBST(root, null, null)
 }
