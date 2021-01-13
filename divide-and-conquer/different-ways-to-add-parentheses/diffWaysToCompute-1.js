@@ -23,7 +23,7 @@ const diffWaysToCompute = function (input) {
             return memo[str]
         }
         if (isNumber(str)) {
-            // 结束条件
+            // 结束条件，此时str为一个数字
             return [Number(str)]
         }
         // 找到所有的操作符

@@ -25,7 +25,7 @@ const slidingPuzzle = function (board) {
             if (cur.toString() === target.toString()) {
                 return step
             }
-            // 数字0的索引，只有0代表空格，可以移动
+            // 数字0的索引，0代表空格，只有0可以移动
             // const idx = cur.findIndex(v => !v)
             const idx = cur.indexOf(0)
             for (let j = 0; j < neighbor[idx].length; j++) {

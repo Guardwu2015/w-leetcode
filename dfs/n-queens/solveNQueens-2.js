@@ -5,7 +5,7 @@
  */
 const res = []
 const solveNQueens = function(n) {
-  const board = new Array(n).fill(new Array.fill('.'))
+  const board = new Array(n).fill(new Array(n).fill('.'))
 
   backtrack(board, 0)
 
