@@ -15,7 +15,7 @@ const pancakeSort = function(arr) {
 
 function sort(cakes, n, res) {
     // base case
-    if (n == 1) return
+    if (n === 1) return
 
     // 寻找最大饼的索引
     let maxCake = 0
@@ -40,9 +40,7 @@ function sort(cakes, n, res) {
 
 function reverse(arr, i, j) {
     while (i < j) {
-        const temp = arr[i]
-        arr[i] = arr[j]
-        arr[j] = temp
+        [arr[i], arr[j]] = [arr[j], arr[i]]
         i++, j--
     }
 }

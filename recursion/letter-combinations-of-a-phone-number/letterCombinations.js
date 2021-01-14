@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/submissions/
+// https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
 /**
  * @param {string} digits
  * @return {string[]}
@@ -20,7 +20,7 @@ function findCombinations(digits, index, s, res) {
     if (digits.length === s.length) {
         res.push(s)
     }
-    const c = Number(digits.charAt(index))
+    const c = Number(digits[index])
     const letter = letterMap[c]
     for (let i = 0; i < letter.length; i++) {
         findCombinations(digits, index + 1, s + letter[i], res)
