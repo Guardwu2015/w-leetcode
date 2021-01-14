@@ -1,4 +1,4 @@
-// https: //leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+// https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 /**
  * 解法一
  * @param {string} s
@@ -41,7 +41,7 @@ const lengthOfLongestSubstring = function(s) {
         }
         window[c]++
         // 判断左侧窗口是否要收缩
-        while (window[c] > 1) {
+        while (window[c] > 1) { // 保证窗口内字符不会重复
             const d = s[left]
             left++
             // 进行窗口内数据的一系列更新

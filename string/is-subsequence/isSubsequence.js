@@ -12,7 +12,7 @@ const isSubsequence = function(s, t) {
         if (s[i] === t[j]) i++
         j++
     }
-    return i == s.length
+    return i === s.length
 }
 
 /**
@@ -41,7 +41,7 @@ const isSubsequence = function(s, t) {
         if (!index[c]) return false
         const pos = left_bound(index[c], j)
         // 二分搜索区间中没有找到字符 c
-        if (pos == index[c].length) return false
+        if (pos === index[c].length) return false
         // 向前移动指针 j
         j = index[c][pos] + 1
     }
