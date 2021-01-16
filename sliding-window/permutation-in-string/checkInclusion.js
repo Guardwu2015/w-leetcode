@@ -35,7 +35,7 @@ const checkInclusion = function(s1, s2) {
         // 判断左侧窗口是否要收缩
         while (right - left >= s1.length) {
             // 在这里判断是否找到了合法的子串
-            if (valid == Object.keys(need).length)
+            if (valid === Object.keys(need).length)
                 return true;
             const d = s2[left];
             left++;

@@ -29,7 +29,7 @@ function canFinish(w, D, cap) {
         let maxCap = cap
         while ((maxCap -= w[i]) >= 0) { // 技巧点
             i++
-            if (i == w.length)
+            if (i === w.length)
                 return true
         }
     }

@@ -35,7 +35,7 @@ const findAnagrams = function(s, p) {
         // 判断左侧窗口是否要收缩
         while (right - left >= p.length) {
             // 在这里判断是否找到了合法的子串
-            if (valid == Object.keys(need).length)
+            if (valid === Object.keys(need).length)
                 res.push(left)
             const d = s[left]
             left++

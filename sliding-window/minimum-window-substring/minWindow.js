@@ -55,6 +55,6 @@ const minWindow = function(s, t) {
         }
     }
     // 返回最小覆盖子串
-    return len == Number.MAX_SAFE_INTEGER ?
+    return len === Number.MAX_SAFE_INTEGER ?
         '' : s.substr(start, len)
 };
