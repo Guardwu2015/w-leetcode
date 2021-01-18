@@ -34,7 +34,7 @@ const trap = function(height) {
 }
 
 /**
- * 思路二：备忘录（动态规划）
+ * 思路二：备忘录
  * @param {number[]} height
  * @return {number}
  */

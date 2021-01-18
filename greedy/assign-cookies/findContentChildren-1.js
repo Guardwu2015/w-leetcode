@@ -14,6 +14,7 @@ const findContentChildren = function(g, s) {
     }
     g.sort(compare)
     s.sort(compare)
+
     let gi = g.length - 1, si = s.length - 1
     let res = 0
     while(gi >= 0 && si >= 0){

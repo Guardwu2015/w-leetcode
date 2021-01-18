@@ -49,9 +49,9 @@ function getNexts(cur) {
     for (let i = 0; i < 4; i++) {
         const curArr = cur.split('')
         const char = cur.charAt(i)
-        curArr[i] = char === '0' ? '9' : Number(char) - 1
+        curArr[i] = char === 0 ? '9' : Number(char) - 1
         list.push(curArr.join(''));
-        curArr[i] = char === '9' ? '0' : Number(char) + 1
+        curArr[i] = char === 9 ? '0' : Number(char) + 1
         list.push(curArr.join(''))
     }
     return list

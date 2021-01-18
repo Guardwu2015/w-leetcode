@@ -30,5 +30,5 @@ const lowestCommonAncestor = function(root, p, q) {
         return null
     }
     // 情况 3
-    return left == null ? right : left
+    return left === null ? right : left
 }

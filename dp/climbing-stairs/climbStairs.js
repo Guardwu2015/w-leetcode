@@ -29,15 +29,15 @@ function calcWays (n, memo) {
  * @return {number}
  */
 const climbStairs2 = function(n) {
-    const memo = []
-    memo[0] = 1
-    memo[1] = 1
+    const dp = []
+    dp[0] = 1
+    dp[1] = 1
 
     for (let i = 2; i <= n; i++) {
-        memo[i] = memo[i - 1] + memo[i - 2]
+        dp[i] = dp[i - 1] + dp[i - 2]
     }
 
-    return memo[n]
+    return dp[n]
 }
 
 // const result1 = climbStairs1(1)

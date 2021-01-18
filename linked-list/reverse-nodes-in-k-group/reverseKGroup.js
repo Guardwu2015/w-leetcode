@@ -18,7 +18,7 @@ var reverseKGroup = function (head, k) {
         b = head
     for (let i = 0; i < k; i++) {
         // 不足 k 个，不需要反转，base case
-        if (b == null) return head
+        if (b === null) return head
         b = b.next
     }
     // 反转前 k 个元素

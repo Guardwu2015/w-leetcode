@@ -8,7 +8,7 @@
  * }
  */
 /**
- * 思路：中序遍历（降序）
+ * 思路：中序遍历，先右后左
  * @param {TreeNode} root
  * @return {TreeNode}
  */

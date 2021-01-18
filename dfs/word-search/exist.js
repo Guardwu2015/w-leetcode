@@ -37,7 +37,7 @@ const exist = function(board, word) {
     return false
 };
 
-function dfs(board, word, index, x, y) {
+function dfs(board, word, index, x, y) { // index记录单词的长度
     if (index === word.length - 1) {
         return board[x][y] === word.charAt(index)
     }
