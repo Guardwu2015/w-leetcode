@@ -9,6 +9,8 @@ const maxSubArray = function (nums) {
     const n = nums.length
     if (n === 0) return 0
     
+    const dp = new Array(n).fill(-1)
+
     // base case
     // 第一个元素前面没有子数组
     dp[0] = nums[0]
@@ -26,3 +28,5 @@ const maxSubArray = function (nums) {
 
     return res
 }
+
+export default maxSubArray

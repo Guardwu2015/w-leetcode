@@ -25,3 +25,5 @@ const maxSubArray = function (nums) {
 
     return res
 }
+
+export default maxSubArray

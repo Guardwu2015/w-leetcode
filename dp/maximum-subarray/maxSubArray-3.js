@@ -6,8 +6,8 @@
  * @return {number}
  */
 
-function maxSum(arr) {
-    let maxSum = -Infinity,
+const maxSubArray = function(arr) {
+    let maxSum = Number.MIN_SAFE_INTEGER,
         len = arr.length;
     for (let i = 0; i < len; i++) {
         let sum = 0;
@@ -18,5 +18,9 @@ function maxSum(arr) {
             }
         }
     }
+
+    return maxSum
 }
+
+export default maxSubArray
 
