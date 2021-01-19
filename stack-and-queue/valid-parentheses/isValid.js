@@ -4,6 +4,12 @@
  * @param {string} s
  * @return {boolean}
  */
+const pairs = {
+    '}': '{',
+    ')': '(',
+    ']': '['
+}
+
 const isValid = function (s) {
     const stack = []
     for (let i = 0; i < s.length; i++) {
@@ -21,11 +27,7 @@ const isValid = function (s) {
     return stack.length === 0
 }
 
-const pairs = {
-    '}': '{',
-    ')': '(',
-    ']': '['
-}
-
 // const res = isValid('{[]}')
 // console.log(res)
+
+export default isValid
