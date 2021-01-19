@@ -48,6 +48,8 @@ function swap(nums, i, j) {
     [nums[i], nums[j]] = [nums[j], nums[i]]
 }
 
+export default findKthLargest
+
 /**
  * 思路二，二叉堆
  */

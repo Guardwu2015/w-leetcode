@@ -4,13 +4,14 @@
  * @param {string} s
  * @return {boolean}
  */
-const pairs = {
-    '}': '{',
-    ')': '(',
-    ']': '['
-}
 
 const isValid = function (s) {
+    const pairs = {
+        '}': '{',
+        ')': '(',
+        ']': '['
+    }
+
     const stack = []
     for (let i = 0; i < s.length; i++) {
         const c = s[i]

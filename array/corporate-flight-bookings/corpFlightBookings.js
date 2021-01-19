@@ -20,7 +20,7 @@ const corpFlightBookings = function(bookings, n) {
         diff[i] = nums[i] - nums[i - 1]
     }
 
-    for (book of bookings) {
+    for (const book of bookings) {
         const i = book[0] - 1
         const j = book[1] - 1
         const val = book[2]
@@ -45,3 +45,5 @@ function getResult() {
     }
     return res
 }
+
+export default corpFlightBookings
