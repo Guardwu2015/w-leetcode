@@ -1,4 +1,4 @@
-import intersect from '../../../array/intersection-of-two-arrays-ii/intersect.js'
+import intersect from '../../../set-and-map/intersection-of-two-arrays-ii/intersect.js'
 
 const nums11 = [1, 2, 2, 1], nums12 = [2, 2]
 test('intersect(nums11, nums12) to equal [2, 2]', () => {
