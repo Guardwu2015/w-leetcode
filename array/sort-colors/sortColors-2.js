@@ -7,7 +7,7 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-const sortColors = function(nums) {
+const sortColors = function (nums) {
     let zero = -1
     let two = nums.length;
 
@@ -18,9 +18,12 @@ const sortColors = function(nums) {
             ++zero;
             [nums[zero], nums[i]] = [nums[i], nums[zero]]
             ++i;
-        } else if (nums[i] === 2){
+        } else if (nums[i] === 2) {
             --two;
             [nums[two], nums[i]] = [nums[i], nums[two]]
         }
     }
-};
+    return nums
+}
+
+export default sortColors

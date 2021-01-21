@@ -25,4 +25,8 @@ const sortColors = function(nums) {
     for (let i = 0; i < count[2]; i++) {
         nums[index++] = 2
     }
+
+    return nums
 }
+
+export default sortColors
