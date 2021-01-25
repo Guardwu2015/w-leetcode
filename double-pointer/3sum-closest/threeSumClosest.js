@@ -1,3 +1,5 @@
+// https://leetcode-cn.com/problems/3sum-closest/
+
 /**
  * 思路：双指针
  * @param {number[]} nums
@@ -42,3 +44,5 @@ const threeSumClosest = function (nums, target) {
     }
     return best
 }
+
+export default threeSumClosest

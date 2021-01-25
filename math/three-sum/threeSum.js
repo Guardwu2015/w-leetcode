@@ -43,3 +43,5 @@ const threeSum = function (nums) {
 
     return res
 }
+
+export default threeSum

@@ -42,3 +42,5 @@ const threeSumClosest = function (nums, target) {
     }
     return best
 }
+
+export default threeSumClosest
