@@ -6,42 +6,42 @@
  * @param {number} k
  * @return {number}
  */
-var findKthLargest = function (nums, k) {
-    let lo = 0, hi = nums.length - 1;
+const findKthLargest = function (nums, k) {
+    let lo = 0, hi = nums.length - 1
 
-    k = nums.length - k;
+    k = nums.length - k
     while (lo <= hi) {
-        let p = partition(nums, lo, hi);
+        let p = partition(nums, lo, hi)
         if (p < k) {
-            lo = p + 1;
+            lo = p + 1
         } else if (p > k) {
-            hi = p - 1;
+            hi = p - 1
         } else {
-            return nums[p];
+            return nums[p]
         }
     }
-    return -1;
+    return -1
 }
 
 function partition(nums, lo, hi) {
-    if (lo == hi) return lo;
-    const pivot = nums[lo];
-    let i = lo, j = hi + 1;
+    if (lo === hi) return lo
+    const pivot = nums[lo]
+    let i = lo, j = hi + 1
     while (true) {
         while (nums[++i] < pivot) {
-            if (i === hi) break;
+            if (i === hi) break
         }
         while (nums[--j] > pivot) {
-            if (j === lo) break;
+            if (j === lo) break
         }
-        if (i >= j) break;
+        if (i >= j) break
 
-        swap(nums, i, j);
+        swap(nums, i, j)
     }
 
-    swap(nums, j, lo);
+    swap(nums, j, lo)
 
-    return j;
+    return j
 }
 
 function swap(nums, i, j) {
