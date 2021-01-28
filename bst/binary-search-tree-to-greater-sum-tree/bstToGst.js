@@ -14,7 +14,7 @@
  */
 
 let sum = 0
-const convertBST = function (root) {
+const bstToGst = function (root) {
     traverse(root)
     return root
 }

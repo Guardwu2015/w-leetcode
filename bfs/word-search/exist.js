@@ -20,10 +20,7 @@ const exist = function(board, word) {
     n = board[0].length
 
     for (let i = 0; i < m; i++) {
-        visited[i] = []
-        for (let j = 0; j < n; j++) {
-            visited[i][j] = false
-        }
+        visited[i] = new Array(n).fill(false)
     }
 
     for (let i = 0; i < m; i++) {

@@ -1,7 +1,12 @@
-/// 200. Number of Islands
-/// https://leetcode.com/problems/number-of-islands
-/// 时间复杂度: O(n*m)
-/// 空间复杂度: O(n*m)
+// https://leetcode.com/problems/number-of-islands
+
+/**
+ * 思路：dfs
+ * 时间复杂度: O(n * m)
+ * 空间复杂度: O(n * m)
+ * @param {character[][]} grid
+ * @return {number}
+ */
 
 const d = [
     [0, 1],
@@ -22,17 +27,14 @@ const numIslands = function (grid) {
 
     // 初始化visited
     for (let i = 0; i < m; i++) {
-        visited[i] = []
-        for (let j = 0; j < n; j++) {
-            visited[i][j] = false
-        }
+        visited[i] = new Array(n).fill(false);
     }
 
     let res = 0
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
             if (grid[i][j] === '1' && !visited[i][j]) {
-                dfs(grid, i, j)
+                bfs(grid, i, j)
                 res++
             }
         }
@@ -44,13 +46,13 @@ const numIslands = function (grid) {
 // 从grid[x][y]的位置开始,进行floodfill
 // 保证(x,y)合法,且grid[x][y]是没有被访问过的陆地
 
-function dfs(grid, x, y) {
+function bfs(grid, x, y) {
     visited[x][y] = true
     for (let i = 0; i < 4; i++) {
         const newX = x + d[i][0]
         const newY = y + d[i][1]
         if (inArea(newX, newY) && !visited[newX][newY] && grid[newX][newY] === '1') {
-            dfs(grid, newX, newY)
+            bfs(grid, newX, newY)
         }
     }
 
@@ -60,6 +62,7 @@ function dfs(grid, x, y) {
 function inArea(x, y) {
     return x >= 0 && x < m && y >= 0 && y < n
 }
+
 
 const grid1 = [
     ['1', '1', '1', '1', '0'],
