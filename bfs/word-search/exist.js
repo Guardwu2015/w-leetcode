@@ -1,6 +1,6 @@
 // https://leetcode-cn.com/problems/word-search/
 /**
- * 思路：回溯，dfs
+ * 思路：bfs
  * @param {character[][]} board
  * @param {string} word
  * @return {boolean}
@@ -25,7 +25,7 @@ const exist = function(board, word) {
 
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
-            if (dfs(board, word, 0, i, j)) {
+            if (bfs(board, word, 0, i, j)) {
                 return true
             }
         }
@@ -34,7 +34,7 @@ const exist = function(board, word) {
     return false
 };
 
-function dfs(board, word, index, x, y) { // index记录单词的长度
+function bfs(board, word, index, x, y) { // index记录单词的长度
     if (index === word.length - 1) {
         return board[x][y] === word.charAt(index)
     }
@@ -45,7 +45,7 @@ function dfs(board, word, index, x, y) { // index记录单词的长度
             const newX = x + d[i][0]
             const newY = y + d[i][1]
             if(inArea(newX, newY) && !visited[newX][newY]  
-                && dfs(board, word, index + 1, newX, newY)) {
+                && bfs(board, word, index + 1, newX, newY)) {
                 return true
             }
         }

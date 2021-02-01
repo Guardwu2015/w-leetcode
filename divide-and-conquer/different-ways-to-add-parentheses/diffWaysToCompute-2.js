@@ -36,7 +36,9 @@ const diffWaysToCompute = function (input) {
     if (isNumber(input)) {
         res.push(input)
     }
+
     memo.set(input, res)
+
     return res
 }
 
